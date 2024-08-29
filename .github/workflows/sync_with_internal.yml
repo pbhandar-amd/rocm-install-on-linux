@@ -1,0 +1,19 @@
+name: Sync with internal develop
+
+on:
+  push:
+    branches: 
+    - develop
+    
+jobs:
+  call-workflow-passing-data:
+    if: ${{ github.repository == 'pbhandar-amd/rocm-install-on-linux' }}
+    name: Sync
+    uses: pbhandar-amd/rocm-docs-core/.github/workflows/merge_ff_only.yml@develop
+    with:
+      source-repo: pbhandar-amd/rocm-install-on-linux
+      source-branch: develop
+      target-repo: pbhandar-amd/rocm-install-on-linux-internal
+      target-branch: develop
+    secrets:
+      github-token: ${{ secrets.GH_TOKEN }}
