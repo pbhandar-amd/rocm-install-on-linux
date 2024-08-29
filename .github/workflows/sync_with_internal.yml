@@ -17,3 +17,4 @@ jobs:
       target-branch: develop
     secrets:
       github-token: ${{ secrets.GH_TOKEN }}
+      
