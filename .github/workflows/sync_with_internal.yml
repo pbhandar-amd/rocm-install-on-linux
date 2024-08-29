@@ -1,6 +1,7 @@
 name: Sync with internal develop
 
 on:
+  workflow_dispatch:
   push:
     branches: 
     - develop
