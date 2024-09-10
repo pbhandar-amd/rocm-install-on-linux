@@ -16,6 +16,7 @@ jobs:
       source-branch: develop
       target-repo: pbhandar-amd/rocm-install-on-linux-internal
       target-branch: develop
+      env-name: Promotion
     secrets:
       github-token: ${{ secrets.GH_TOKEN }}
       
