@@ -263,7 +263,7 @@ setup_installer_public_repos() {
 
     $SUDO chmod 644 ./$AMDGPU_INSTALL_NAME
         
-    $SUDO dnf download --downloadonly --resolve --downloaddir="./$CREATE_INSTALLER_PACKAGE_DIR" install ./$AMDGPU_INSTALL_NAME
+    $SUDO dnf download --downloadonly --resolve --downloaddir="./$CREATE_INSTALLER_PACKAGE_DIR" ./$AMDGPU_INSTALL_NAME
 
     # Install amdgpu-install for host installer creation
     $SUDO dnf clean all

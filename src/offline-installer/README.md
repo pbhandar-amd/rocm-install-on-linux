@@ -45,6 +45,10 @@ ROCm versions enabled for each distro.
 | Suse 15.5      | Yes    |  No    |  No    |  No    |  Yes   |  Yes   |  Yes   |  Yes   |  Yes   |  Yes   |
 | Suse 15.6      | No     |  No    |  No    |  No    |  No    |  No    |  No    |  No    |  No    |  Yes   |
 
+## Rocm Usecases Support Notes
+
+`multimediasdk` is not supported on ROCm 5.7.3 and on 6.2+
+
 ## Building
 
 ### Prerequisites

@@ -833,9 +833,12 @@ bool is_ubuntu_2004(MENU_DATA *pMenuData)
     return is_distro_id_and_distro_version(pMenuData, "ubuntu", "20.04");
 }
 
+// multimedia supported on all rocm versions except 5.7.3 and 6.2+
 bool is_mutlimediasdk_enabled(const char *ROCMVersion)
 {
-    return strcmp(ROCMVersion, "5.7.3") == 0 ? false : true;
+    return ( ( strcmp(ROCMVersion, "5.7.3") == 0 ) || 
+    ( strcmp(ROCMVersion, "6.2") == 0 ) || 
+    ( strcmp(ROCMVersion, "6.2.1") == 0 ) ) ? false : true;
 }
 
 bool is_rocm_version_empty(MENU_DATA *pMenuData)
